@@ -221,16 +221,18 @@ class ProxmoxMonitor:
                         current_value = point.get(resource_key)
                         max_value = point.get(max_resource_key)
 
-                        # Skip point if data is missing or invalid
-                        if current_value is None or max_value is None or max_value == 0:
+                        if current_value is None:
                             continue
-                        
+
                         # Calculate the usage ratio
-                        if resource_key == "cpu":
-                            current_ratio = current_value
+                        if resource_key == "mem":
+                            # Skip point if data is missing or invalid
+                            if current_value is None or max_value is None or max_value == 0:
+                                continue
+                            else:
+                                current_ratio = current_value / max_value
                         else:
-                            current_ratio = current_value / max_value
-                        
+                            current_ratio = current_value
                         
                         if current_ratio > threshold:
                             violating_points += 1

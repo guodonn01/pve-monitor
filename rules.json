@@ -16,5 +16,23 @@
         "interval": 3600, 
         "ratio": 0.9 , 
         "action" : "send email" 
+    },
+    {
+        "name": "High network in Usage (Day)", 
+        "timeframe": "day", 
+        "resource": "netin", 
+        "threshold": 512000.0, 
+        "interval": 300, 
+        "ratio": 0.9 , 
+        "action" : "send email" 
+    },
+    {
+        "name": "High network out Usage (Day)", 
+        "timeframe": "day", 
+        "resource": "netout", 
+        "threshold": 512000.0, 
+        "interval": 300, 
+        "ratio": 0.9 , 
+        "action" : "send email" 
     }
 ]

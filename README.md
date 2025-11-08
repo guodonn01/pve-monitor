@@ -100,6 +100,12 @@ pip install requests
      -> ALERT: VM 212 (2a06-7e00-0000-1a00-000f) broke rule 'High CPU Usage (Day)'
         Resource: cpu, Window Ratio: 1.00 >= 0.9
         Time Window: 2025-11-08 05:07:00 to 2025-11-08 05:11:00
+     -> ALERT: VM 212 (2a06-7e00-0000-1a00-000f) broke rule 'High network in Usage (Day)'
+        Resource: netin, Window Ratio: 1.00 >= 0.9
+        Time Window: 2025-11-08 05:03:00 to 2025-11-08 05:07:00
+     -> ALERT: VM 212 (2a06-7e00-0000-1a00-000f) broke rule 'High network out Usage (Day)'
+        Resource: netout, Window Ratio: 1.00 >= 0.9
+        Time Window: 2025-11-08 05:03:00 to 2025-11-08 05:07:00
        -> ACTIONS: send email
      [KVM  205] 2a06-7e00-0000-1a00-0003  -> RUNNING
      [KVM  209] foss-webserver            -> RUNNING
