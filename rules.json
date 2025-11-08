@@ -1,0 +1,20 @@
+[
+    {
+        "name": "High CPU Usage (Day)", 
+        "timeframe": "day", 
+        "resource": "cpu", 
+        "threshold": 0.12, 
+        "interval": 300, 
+        "ratio": 0.9 , 
+        "action" : "send email" 
+    }, 
+    {
+        "name": "High Memory Usage (Day)", 
+        "timeframe": "day", 
+        "resource": "mem", 
+        "threshold": 0.9, 
+        "interval": 3600, 
+        "ratio": 0.9 , 
+        "action" : "send email" 
+    }
+]
